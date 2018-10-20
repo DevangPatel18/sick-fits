@@ -92,7 +92,7 @@ class AutoComplete extends Component {
                       key={item.id}
                       highlighted={index === highlightedIndex}
                     >
-                      <img width="50" alt={item.title} />
+                      <img width="50" src={item.image} alt={item.title} />
                       {item.title}
                     </DropDownItem>
                   ))}
