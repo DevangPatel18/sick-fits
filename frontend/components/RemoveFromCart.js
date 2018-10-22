@@ -31,7 +31,6 @@ class RemoveFromCart extends Component {
   update = (cache, payload) => {
     // 1. First read the cache
     const data = cache.readQuery({ query: CURRENT_USER_QUERY });
-    console.log(data);
     // 2. Remove that item from the cart
     const cartItemId = payload.data.removeFromCart.id;
     data.me.cart = data.me.cart.filter(cartItem => cartItem.id !== cartItemId);
@@ -69,3 +68,4 @@ class RemoveFromCart extends Component {
 }
 
 export default RemoveFromCart;
+export { REMOVE_FROM_CART_MUTATION };
